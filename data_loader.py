@@ -145,6 +145,7 @@ class LoadModRecData:
                     collect = self.dataCube[modType, snrValue][:num_samples_per_key]
                 else:
                     collect = self.dataCube[modType, snrValue]
+                # print(modType, snrValue, collect.shape)
                 for instance in collect:
                     signalData[example_index] = instance
                     signalLabels[example_index] = (modType, snrValue)
